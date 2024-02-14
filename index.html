@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Gem</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main class="m-8">
+        <!-- main content container -->
+        <div class="flex flex-col md:flex-row gap-4">
+            <!-- shape card container -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- triangle -->
+                <div class="card bg-base-100 shadow-xl p-5">
+                    <figure><img src="images/triangle.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Triangle</h2>
+                        <p>Area(A) = 0.5 x b x h </p>
+                        <div class="flex justify-between items-center">
+                            <input type="text" id="triangle-base" placeholder="base"
+                                class="w-24 text-xl bg-gray-100 items-center rounded-md p-2" />
+                            <span>cm</span>
+                            <input type="text" id="triangle-height" placeholder="height"
+                                class="w-24 text-xl bg-gray-100 items-center rounded-md p-2">
+                            <span>cm</span>
+                        </div>
+                        <p>Area: <span id="triangle-area">0</span> cm<sup>2</sup></p>
+                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <div class="card-actions">
+                            <button onclick="calculateTriangleArea()" class="btn btn-primary w-full">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Rectangle card -->
+                <div class="card bg-base-100 shadow-xl p-5">
+                    <figure><img src="images/rectangle.png" alt="rectangle" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Rectangle</h2>
+                        <p>Area (A) = w x I</p>
+                        <div>
+                            <!-- length input -->
+                            <input id="rectangle-length" class="w-24 text-xl bg-gray-100 items-center rounded-md p-2"
+                                type="text" placeholder="length">
+                            <span>cm</span>
+                            <!-- width input -->
+                            <input id="rectangle-width" class="w-24 text-xl bg-gray-100 items-center rounded-md p-2"
+                                type="text" placeholder="width">
+                            <span>cm</span>
+                        </div>
+                        <p>Area: <span id="rectangle-area">0</span><span> cm<sup>2</sup></span></p>
+                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <div class="card-actions justify-end">
+                            <button onclick="calculateRectangleArea()" class="btn btn-primary w-full">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Parallelogram card -->
+                <div class="card bg-base-100 shadow-xl p-5">
+                    <figure><img src="images/parallelogram.png" alt="rectangle" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Parallelogram</h2>
+                        <p>Area (A) = base x height</p>
+                        <div>
+                            <!-- base input -->
+                            <input id="parallelogram-base" class="w-24 text-xl bg-gray-100 items-center rounded-md p-2"
+                                type="text" placeholder="base">
+                            <span>cm</span>
+                            <!-- height input -->
+                            <input id="parallelogram-height"
+                                class="w-24 text-xl bg-gray-100 items-center rounded-md p-2" type="text"
+                                placeholder="height">
+                            <span>cm</span>
+                        </div>
+                        <p>Area: <span id="parallelogram-area">0</span><span> cm<sup>2</sup></span></p>
+                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <div class="card-actions justify-end">
+                            <button onclick="calculateParallelogramArea()"
+                                class="btn btn-primary w-full">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- pentagon card -->
+                <div class="card bg-base-100 shadow-xl p-5">
+                    <figure><img src="images/pentagon.png" alt="pentagon" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Pentagon</h2>
+                        <p>Area (A) =0.5 x base x height</p>
+                        <div>
+                            <!-- base input -->
+                            <input id="pentagon-base" class="w-24 text-xl bg-gray-100 items-center rounded-md p-2"
+                                type="text" placeholder="base">
+                            <span>cm</span>
+                            <!-- height input -->
+                            <input id="pentagon-height" class="w-24 text-xl bg-gray-100 items-center rounded-md p-2"
+                                type="text" placeholder="height">
+                            <span>cm</span>
+                        </div>
+                        <p>Area: <span id="pentagon-area">0</span><span> cm<sup>2</sup></span></p>
+                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <div class="card-actions justify-end">
+                            <button onclick="calculatePentagonArea()" class="btn btn-primary w-full">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- area calculation container -->
+            <div class="w-96 p-10 border-2 border-gray-700 rounded-xl">
+                <h3 class="text-3xl">Area calculator</h3>
+            </div>
+        </div>
+    </main>
+    <!-- scripts -->
+    <script src="scripts/triangle.js"></script>
+    <script src="scripts/rectangle.js"></script>
+    <script src="scripts/parallelogram.js"></script>
+    <script src="scripts/pentagon.js"></script>
+</body>
+
+</html>
